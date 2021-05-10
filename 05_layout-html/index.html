@@ -6,15 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Отели</title>
+    <link rel="stylesheet" href="/weblayout/05_layout-html/css/normalize.css">
+    <link rel="stylesheet" href="/weblayout/05_layout-html/css/styles.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="conteiner">
+        <div class="container header-container-up">
             <a href="#" class="logo"></a>
             <img src="../05_layout-html/img/logo.svg" alt="Lagoona. Сеть отелей" class="logo-img">
-            <a href="tel:+74953225487">+7 495 322 54 48</a>
+            <a href="tel:+74953225487" class="tel">+7 495 322 54 48</a>
             <a href="#" class="personal-area">Личный кабиенет</a>
+        </div>
+        <div class="container header-container-down ">
             <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
@@ -37,40 +41,44 @@
                     </li>
                 </ul>
             </nav>
-            <button class="btn">Хочу тур</button>
-            <button class="btn">Обратный звонок</button>
+            <button class="btn header-btn">Хочу тур</button>
+            <button class="btn header-btn">Обратный звонок</button>
         </div>
     </header>
     <main>
         <section class="special-offer">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="section-heading">Спецпредложение</h2>
                 <ul class="special-offer-list">
-                    <li class="special-offer-item">
-                        <div class="special-offer-background1"></div>
-                        <!--как красиво называть бекграунды?-->
-                        <h3 class="special-offer-h3">Мальдивские острова</h3>
-                        <div class="special-offer-price">от 55 000 р</div>
-                        <div class="special-offer-more">Подробнее</div>
-                    </li>
-                    <li class="special-offer-item">
-                        <div class="special-offer-background2"></div>
-                        <h3 class="special-offer-h3">Горящие туры на остров Крит</h3>
-                        <div class="special-offer-price">от 30 000 р</div>
-                        <div class="special-offer-more">Подробнее</div>
-                    </li>
-                    <li class="special-offer-item">
-                        <!--Тут отличается размер но по смыслу вроде блок тот же самый. Как я понимаю там нужно будет разделять через div на левую и равую часть. Прошу поправить если не прав.-->
-                        <div class="special-offer-background3"></div>
-                        <h3 class="special-offer-h3">Номер категории люкс</h3>
-                        <div class="special-offer-price">от 5000 р</div>
-                        <div class="special-offer-more">Подробнее</div>
-                    </li>
+                    <div class="special-offer-listi-left">
+                        <li class="special-offer-item">
+                            <div class="special-offer-background1"></div>
+                            <!--как красиво называть бекграунды?-->
+                            <h3 class="special-offer-h3">Мальдивские острова</h3>
+                            <div class="special-offer-price">от 55 000 р</div>
+                            <div class="special-offer-more">Подробнее</div>
+                        </li>
+                        <li class="special-offer-item">
+                            <div class="special-offer-background2"></div>
+                            <h3 class="special-offer-h3">Горящие туры на остров Крит</h3>
+                            <div class="special-offer-price">от 30 000 р</div>
+                            <div class="special-offer-more">Подробнее</div>
+                        </li>
+                    </div>
+                    <div class="special-offer-listi-right">
+                        <li class="special-offer-item">
+                            <!--Тут отличается размер но по смыслу вроде блок тот же самый. Как я понимаю там нужно будет разделять через div на левую и равую часть. Прошу поправить если не прав.-->
+                            <div class="special-offer-background3"></div>
+                            <h3 class="special-offer-h3">Номер категории люкс</h3>
+                            <div class="special-offer-price">от 5000 р</div>
+                            <div class="special-offer-more">Подробнее</div>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </section>
         <section class="about-us">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="section-heading">О нас</h2>
                 <p class="paragraph">
                     Идейные соображения высшего порядка, а также сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения высшего порядка, а также дальнейшее развитие
@@ -81,82 +89,90 @@
 
         </section>
         <section class="services">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="section-heading">Услуги</h2>
                 <ul class="services-list">
-                    <li class="services-item">
-                        <div class="services-item-background1"></div>
-                        <h3 class="services-h3">Эксклюзивное обслуживание</h3>
-                        <p class="paragraph">Равным образом постоянный количественный рост и сфера нашей активности</p>
-                    </li>
-                    <li class="services-item">
-                        <div class="services-item-background2"></div>
-                        <h3 class="services-h3">Аренда банкетных залов</h3>
-                        <p class="paragraph">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.</p>
-                    </li>
-                    <li class="services-item">
-                        <div class="services-item-background3"></div>
-                        <h3 class="services-h3">Сауны, бассейны,бани, фитнес-залы</h3>
-                        <p class="paragraph">Не следует, однако забывать, что начало повседневной работы по формированию позиции
-                        </p>
-                    </li>
-                    <li class="services-item">
-                        <div class="services-item-background4"></div>
-                        <h3 class="services-h3">Охроняемые автомобильные стоянки</h3>
-                        <p class="paragraph">Не следует, однако забывать, что начало повседневной работы по формированию позиции
-                        </p>
-                    </li>
+                    <div class="services-list-up">
+                        <li class="services-item">
+                            <div class="services-item-background1"></div>
+                            <h3 class="services-h3">Эксклюзивное обслуживание</h3>
+                            <p class="paragraph">Равным образом постоянный количественный рост и сфера нашей активности</p>
+                        </li>
+                        <li class="services-item">
+                            <div class="services-item-background2"></div>
+                            <h3 class="services-h3">Аренда банкетных залов</h3>
+                            <p class="paragraph">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм.</p>
+                        </li>
+                    </div>
+                    <div class="services-list-down">
+                        <li class="services-item">
+                            <div class="services-item-background3"></div>
+                            <h3 class="services-h3">Сауны, бассейны,бани, фитнес-залы</h3>
+                            <p class="paragraph">Не следует, однако забывать, что начало повседневной работы по формированию позиции
+                            </p>
+                        </li>
+                        <li class="services-item">
+                            <div class="services-item-background4"></div>
+                            <h3 class="services-h3">Охроняемые автомобильные стоянки</h3>
+                            <p class="paragraph">Не следует, однако забывать, что начало повседневной работы по формированию позиции
+                            </p>
+                        </li>
+                    </div>
                 </ul>
             </div>
 
         </section>
         <section class="advantages">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="section-heading">Преимущества</h2>
                 <ul class="advantages-list">
-                    <li class="advantages-item">
-                        <div class="bathub"></div>
-                        <p class="paragraph">Идейные соображения высшего порядка, а также постоянный количественный рост
-                        </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="hange"></div>
-                        <p class="paragraph">Значимость этих проблем настолько очевидна, что вопрос остается открытым
-                        </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="heating"></div>
-                        <p class="paragraph">Таким образом реализация плановых заданий играет важную роль для понимания
-                        </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="hotel-key"></div>
-                        <p class="paragraph">Повседневная практика показывает, что сложившаяся структура организации</p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="parking"></div>
-                        <p class="paragraph">Равным образом рамки и место обучения кадров способствует подготовки сотрудника
-                        </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="reseption"></div>
-                        <p class="paragraph">Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="security-box"></div>
-                        <p class="paragraph">Повседневная практика показывает, что дальнейшее развитие различных форм
-                        </p>
-                    </li>
-                    <li class="advantages-item">
-                        <div class="swimming-pool"></div>
-                        <p class="paragraph">Значимость этого настолько очевидна, что консультация наших экспертов помогает
-                        </p>
-                    </li>
+                    <div class="advantages-list-up">
+                        <li class="advantages-item">
+                            <div class="bathub"></div>
+                            <p class="paragraph">Идейные соображения высшего порядка, а также постоянный количественный рост
+                            </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="hange"></div>
+                            <p class="paragraph">Значимость этих проблем настолько очевидна, что вопрос остается открытым
+                            </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="heating"></div>
+                            <p class="paragraph">Таким образом реализация плановых заданий играет важную роль для понимания
+                            </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="hotel-key"></div>
+                            <p class="paragraph">Повседневная практика показывает, что сложившаяся структура организации</p>
+                        </li>
+                    </div>
+                    <div class="advantages-list-down">
+                        <li class="advantages-item">
+                            <div class="parking"></div>
+                            <p class="paragraph">Равным образом рамки и место обучения кадров способствует подготовки сотрудника
+                            </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="reseption"></div>
+                            <p class="paragraph">Консультация с активом влечет за собой процесс внедрения услуг нашего сервиса </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="security-box"></div>
+                            <p class="paragraph">Повседневная практика показывает, что дальнейшее развитие различных форм
+                            </p>
+                        </li>
+                        <li class="advantages-item">
+                            <div class="swimming-pool"></div>
+                            <p class="paragraph">Значимость этого настолько очевидна, что консультация наших экспертов помогает
+                            </p>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </section>
         <section class="accommodation">
-            <div class="conteiner">
+            <div class="container">
                 <h2 class="section-heading">Размещение</h2>
                 <ul class="accommodation-list">
                     <li class="accommodation-item">
