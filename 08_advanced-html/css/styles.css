@@ -659,10 +659,9 @@
             background-position: bottom right 175px;
         }
 
-        .footer-social-list {
-            margin-left: 600px;
-            margin-top: -200px;
-            /*не понятно как избежать такой конструкции и почему в макете написано цвет белый у иконок хотя вижно что они точно не белые*/
+        .footer-social {
+            margin-left: 250px;
+            margin-top: 51px;
         }
 
         .footer-social-icon {
@@ -670,6 +669,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-color: transparent;
+            opacity: 0.5;
             width: 25px;
             height: 25px;
             margin-bottom: 10px;
