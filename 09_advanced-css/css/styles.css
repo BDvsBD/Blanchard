@@ -1,0 +1,877 @@
+        @font-face {
+            font-family: 'MullerRegular';
+            src: url('../fonts/MullerRegular.woff2') format('woff2'), url('../fonts/MullerRegular.woff') format('woff');
+            font-display: swap;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'MullerBold';
+            src: url('../fonts/MullerBold.woff2') format('woff2'), url('../fonts/MullerBold.woff') format('woff');
+            font-display: swap;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'MullerMedium';
+            src: url('../fonts/MullerMedium.woff2') format('woff2'), url('../fonts/MullerMedium.woff') format('woff');
+            font-display: swap;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+         :root {
+            --CC9933: #CC9933;
+            --A47312: #A47312;
+            --E9C479: #E9C479;
+            --FFFFFF: #FFFFFF;
+            --black: #000000;
+        }
+
+        html {
+            font-family: 'MullerRegular', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'MullerRegular', sans-serif;
+            background-color: #E5E5E5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        svg {
+            transition: fill 0.2s linear;
+            transition: stroke 0.2s linear;
+        }
+
+        .header {
+            margin-top: 30px;
+            margin-bottom: 70px;
+        }
+
+        .header-container-up {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .tel {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 500;
+            color: #666666;
+            transition: color 0.2s linear;
+        }
+
+        .tel:hover {
+            cursor: pointer;
+            color: var(--CC9933);
+        }
+
+        .tel:active {
+            color: var(--A47312);
+        }
+
+        .header-container-down {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            margin-right: 40px;
+            transition: color 0.2s linear;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+            opacity: 70%;
+        }
+
+        .logo:active {
+            cursor: pointer;
+            opacity: 40%;
+        }
+
+        .arrow {
+            margin-right: 7px;
+            transition: fill 0.2s linear;
+        }
+
+        .personal-area {
+            margin-left: auto;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--CC9933);
+            transition: color 0.2s linear;
+        }
+
+        .personal-area:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .personal-area:hover svg {
+            cursor: pointer;
+            fill: var(--E9C479);
+        }
+
+        .personal-area:active {
+            color: var(--A47312);
+        }
+
+        .personal-area:active svg {
+            fill: var(--A47312);
+        }
+
+        .header-container-down {
+            max-width: 1170px;
+            height: 70px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+        }
+
+        .nav-list {
+            margin-left: 30px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .nav-item {
+            margin-right: 45px;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: #666666;
+        }
+
+        .nav-link {
+            transition: color 0.2s linear;
+        }
+
+        .nav-link:hover {
+            cursor: pointer;
+            color: var(--CC9933);
+        }
+
+        .nav-link:active {
+            color: var(--A47312);
+        }
+
+        .Rectangle {
+            display: inline-block;
+            background-image: url("../img/Rectangle.svg");
+            height: 50px;
+            width: 1px;
+            background-position: top right;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            margin-top: 30px;
+            margin-bottom: 70px;
+            height: 154px;
+        }
+
+        .btn {
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            padding: 15px 21px;
+            border-radius: 15px;
+            border: 1px solid var(--CC9933);
+            color: var(--CC9933);
+            background-color: white;
+            transition: background 0.4s linear;
+            transition: color 0.4s linear;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: var(--CC9933);
+            color: var(--FFFFFF);
+        }
+
+        .btn:active {
+            background-color: var(--A47312);
+            color: var(--FFFFFF);
+        }
+
+        .header-btn {
+            margin-left: 45px;
+        }
+
+        .section-heading {
+            font-size: 40px;
+            line-height: 1;
+            font-weight: 400;
+            color: #333333;
+            margin-left: 40px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .special-offer-list {
+            width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 69px;
+        }
+
+        .special-offer-left {
+            width: 572px;
+        }
+
+        .special-offer-right {
+            width: 572px;
+        }
+
+        .background-1 {
+            background-size: cover;
+            background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/background-1.jpg");
+            border-radius: 15px;
+            margin-bottom: 23px;
+        }
+
+        .background-2 {
+            background-size: cover;
+            background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/background-2.jpg");
+            border-radius: 15px;
+        }
+
+        .background-3 {
+            background-size: cover;
+            background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/background-3.jpg");
+            border-radius: 15px;
+            height: 100%;
+        }
+
+        .special-offer-h3 {
+            max-width: 340px;
+            font-size: 40px;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--FFFFFF);
+            padding-top: 40px;
+            padding-left: 40px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .special-offer-price {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--FFFFFF);
+            padding-left: 40px;
+            margin-bottom: 47px;
+        }
+
+        .special-offer-more {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--CC9933);
+            margin-right: 2px;
+            padding-left: 40px;
+            padding-bottom: 40px;
+            transition: color 0.2s linear;
+        }
+
+        .special-offer-more:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .special-offer-more:hover svg {
+            cursor: pointer;
+            stroke: var(--E9C479);
+        }
+
+        .special-offer-more:active {
+            color: var(--FFFFFF);
+        }
+
+        .special-offer-more:active svg {
+            stroke: var(--FFFFFF);
+        }
+
+        .Rectangle-2 {
+            transform: translateY(4px);
+            margin-left: 6px;
+        }
+
+        .h3-big {
+            max-width: 340px;
+            font-size: 60px;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--FFFFFF);
+            padding-top: 211px;
+            padding-left: 40px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .price-big {
+            font-size: 30px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--FFFFFF);
+            padding-left: 40px;
+            margin-bottom: 47px;
+        }
+
+        .paragraph {
+            max-width: 888px;
+            font-size: 16px;
+            line-height: 2;
+            font-weight: 400;
+            color: var(--000000);
+            margin-top: 11px;
+            margin-bottom: 70px;
+        }
+
+        .services-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 70px;
+        }
+
+        .services-item {
+            width: 573px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 23px;
+            margin-right: 23px;
+        }
+
+        .services-item:nth-child(2n) {
+            margin-right: 0;
+        }
+
+        .services-item-background-1 {
+            background-image: url("../img/services-1.jpg");
+        }
+
+        .services-item-background-2 {
+            background-image: url("../img/services-2.jpg");
+        }
+
+        .services-item-background-3 {
+            background-image: url("../img/services-3.jpg");
+        }
+
+        .services-item-background-4 {
+            background-image: url("../img/services-4.jpg");
+        }
+
+        .services-h3 {
+            display: inline-block;
+            padding-top: 191px;
+            padding-left: 40px;
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 400;
+            color: var(--CC9933);
+            margin-top: 0;
+            margin-bottom: 0;
+            transition: color 0.2s linear;
+        }
+
+        .services-h3:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .services-h3:hover svg {
+            stroke: var(--E9C479);
+        }
+
+        .services-h3:active {
+            color: var(--A47312);
+        }
+
+        .services-h3:active svg {
+            stroke: var(--A47312);
+        }
+
+        .services-paragraph {
+            margin-top: 0;
+            margin-bottom: 50px;
+            max-width: 440px;
+            padding-left: 40px;
+            font-size: 16px;
+            line-height: 2;
+            font-weight: 400;
+            color: var(--000000);
+        }
+
+        .advantages-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            margin-bottom: 70px;
+        }
+
+        .advantages-item {
+            width: 275px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+            background-repeat: no-repeat;
+            background-position: 43px 42px;
+            padding-left: 43px;
+            padding-top: 116px;
+            margin-right: 23px;
+            margin-bottom: 23px;
+        }
+
+        .advantages-item:nth-child(4n) {
+            margin-right: 0;
+        }
+
+        .advantages-paragraph {
+            max-width: 188px;
+            font-size: 16px;
+            line-height: 2;
+            font-weight: 400;
+            color: var(--000000);
+            margin-top: 0;
+            margin-bottom: 41px;
+        }
+
+        .hanger {
+            background-image: url("../img/hanger.svg");
+        }
+
+        .bathtub {
+            background-image: url("../img/bathtub.svg");
+        }
+
+        .heating {
+            background-image: url("../img/heating.svg");
+        }
+
+        .hotel-key {
+            background-image: url("../img/hotel-key.svg");
+        }
+
+        .parking {
+            background-image: url("../img/parking.svg");
+        }
+
+        .reception {
+            background-image: url("../img/reception.svg");
+        }
+
+        .security-box {
+            background-image: url("../img/security-box.svg");
+        }
+
+        .swimming-pool {
+            background-image: url("../img/swimming-pool.svg");
+        }
+
+        .accommodation-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .accommodation-item {
+            width: 374px;
+            min-height: 440px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+            margin-bottom: 23px;
+            margin-right: 23px;
+        }
+
+        .accommodation-item:nth-child(3n) {
+            margin-right: 0px;
+        }
+
+        .price-per-night {
+            display: inline-block;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: #999999;
+            padding-top: 20px;
+            padding-left: 45px;
+            margin-right: 44px;
+        }
+
+        .bold {
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--000000);
+        }
+
+        .hotel-name {
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--000000);
+            margin-top: 16px;
+            padding-left: 45px;
+        }
+
+        .hotel-region {
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: #999999;
+            margin-top: 16px;
+            padding-left: 45px;
+        }
+
+        .hotel-btn {
+            padding: 13px 20px;
+            margin-left: 45px;
+            margin-top: 20px;
+            margin-bottom: 41px;
+        }
+
+        .other-offers {
+            background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/more-hotels.png");
+            background-size: cover;
+            height: 100%;
+            font-size: 20px;
+            line-height: 2;
+            font-weight: 500;
+            color: var(--FFFFFF);
+            padding-left: 54px;
+            padding-top: 373px;
+            transition: color 0.2s linear;
+        }
+
+        .other-offers::after {
+            content: "";
+            position: absolute;
+        }
+
+        .other-offers:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .other-offers:active {
+            color: var(--A47312);
+        }
+
+        .Rectangle-white {
+            display: inline-block;
+            background-image: url("../img/Rectangle-white.svg");
+            height: 11px;
+            width: 11px;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .want-tour-container {
+            border-radius: 15px;
+            background-color: #E9E9E9;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            padding-top: 38px;
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 274px;
+        }
+
+        .want-tour-form {
+            min-height: 106px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+            margin-top: 17px;
+            padding-left: 28px;
+            padding-right: 28px;
+        }
+
+        .form-item {
+            border-right: 1px solid #E1E1E1;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .form-btn {
+            margin-left: 28px;
+            padding: 17px 30px 17px 30px;
+        }
+
+        .form-label {
+            font-size: 12px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--000000);
+        }
+
+        .form {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 31px;
+        }
+
+        .form-choice {
+            max-width: 169px;
+            font-size: 16px;
+            border: 0;
+        }
+
+        .form-choice-border {
+            max-width: 121px;
+            border: 0;
+            border-bottom: 1px solid #CCCCCC;
+        }
+
+        .contacts-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1168px;
+            border-radius: 15px;
+            background-color: var(--FFFFFF);
+            padding: 45px 45px 45px 45px;
+            margin-top: 26px;
+            margin-bottom: 19px;
+        }
+
+        .contacts-left {
+            max-width: 375px;
+        }
+
+        .contacts-item {
+            width: 375px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #C4C4C4;
+            margin-top: 25px;
+            font-size: 16px;
+            line-height: 2;
+            font-weight: 400;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 20px;
+            line-height: 1;
+            font-weight: 700;
+            color: var(--000000);
+        }
+
+        .contacts-text {
+            max-width: 235px;
+            color: var(--000000);
+        }
+
+        .address {
+            font-style: normal;
+            color: var(--000000);
+        }
+
+        .contacts-tel {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-right: 83px;
+            /*не понимаю как тут сделать по другому. Без paddinaga*/
+        }
+
+        .contacts-active {
+            color: var(--CC9933);
+            transition: color 0.2s linear;
+        }
+
+        .contacts-active:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .contacts-active:active {
+            color: var(--A47312);
+        }
+
+        .mail-text {
+            color: #999999;
+        }
+
+        .contacts-right {
+            background-image: url(/img/contacts.png);
+            width: 653px;
+            height: 528px;
+        }
+
+        .contacts-btn {
+            padding: 29px 27px 29px 27px;
+            margin-top: 38px;
+        }
+
+        .footer-container {
+            display: flex;
+            max-width: 1168px;
+            height: 352px;
+            border-radius: 15px;
+            background-color: #333333;
+            font-size: 16px;
+            font-style: normal;
+            line-height: 190%;
+            color: var(--FFFFFF);
+            margin-bottom: 20px;
+        }
+
+        .footer-left {
+            max-width: 376px;
+            padding-left: 52px;
+        }
+
+        .footer-text {
+            margin-top: 44px;
+        }
+
+        .terms-of-use {
+            margin-bottom: 55px;
+            color: var(--CC9933);
+            transition: color 0.2s linear;
+        }
+
+        .terms-of-use:hover {
+            cursor: pointer;
+            color: var(--E9C479);
+        }
+
+        .terms-of-use:active {
+            color: var(--A47312);
+        }
+
+        .footer-right {
+            width: 358px;
+            margin-left: 102px;
+            margin-top: 44px;
+        }
+
+        .address-style {
+            color: var(--FFFFFF);
+        }
+
+        .footer-contacts-text {
+            margin-top: 30px;
+        }
+
+        .logo-black {
+            background-image: url(/img/logo-black.svg);
+            background-repeat: no-repeat;
+            background-position: bottom right 175px;
+        }
+
+        .footer-social {
+            margin-left: 250px;
+            margin-top: 51px;
+        }
+
+        .footer-social-icon {
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            opacity: 0.5;
+            width: 25px;
+            height: 25px;
+            margin-bottom: 10px;
+            background-position: center;
+        }
+
+        .footer-social-icon-tripadvisor {
+            background-image: url(/img/tripadvisor.svg);
+        }
+
+        .footer-social-icon:hover {
+            cursor: pointer;
+            opacity: 100%;
+        }
+
+        .footer-social-icon-twitter {
+            background-image: url(/img/twitter.svg);
+        }
+
+        .footer-social-icon-facebook {
+            background-image: url(/img/facebook.svg);
+        }
+
+        .footer-social-icon-vk {
+            background-image: url(/img/vk.svg);
+        }
+
+        .footer-social-icon-instagram {
+            background-image: url(/img/instagram.svg);
+        }
+        /*Есть несколько вопросов:
+
+1)При помощи псевдоклассов сделайте сетку элементов, которая не меняется при добавлении новых блоков.
+
+Я так понимаю тут нужно было делать все блоки кроме "Спецпредложения"
+
+2) Реализуйте плавные ховер-эффекты на все ссылки и кнопки на сайте.
+
+Тут я понимаю пока focus делать не надо. Стили можно как понимаю из макета взять (появились в макете слева).
+
+Самый главный вопрос не понимаю как под ховер добавить стрелку декоративную.
+
+3) Сделайте блок «Посмотреть все варианты» кликабельным с помощью псевдоэлемента.
+
+Вроде сработало, но не понимаю логику как. Я просто добавил after и все
+
+4) Исправьте именование шрифтов согласно указаниям из соответствующего урока этого модуля.
+
+Не совсем понятно что нужно сделать. Как я понимаю у меня и так везде уже через font-weight
+
+5) Выделите повторяющиеся цвета сайта в кастомные свойства.
+
+Тут вроде все сделал.
+
+6) В скрытых слоях макета есть слои “DARKEN”. Откройте их и реализуйте с помощью CSS те же эффекты.
+
+Тут вроде все тоже понятно
+
+7) Я так понимаю все svg картинки нужно запихнуть в html как код чтобы мы могли менять цвета и так далее чтобы задавать стили для иконок social
+
+
+
+Вот ссылка:*/
