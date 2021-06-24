@@ -22,6 +22,14 @@
             font-style: normal;
         }
 
+         :root {
+            --color--orange: #CC9933;
+            --color--orange--dark: #A47312;
+            --color--orange-light: #E9C479;
+            --color-white: #FFFFFF;
+            --color--black: #000000;
+        }
+
         html {
             font-family: 'MullerRegular', sans-serif;
         }
@@ -49,18 +57,19 @@
             padding-right: 15px;
         }
 
-        a {
-            text-decoration: none;
-        }
-
         ul {
-            list-style: none;
             margin: 0;
             padding: 0;
+            list-style: none;
         }
 
         img {
             max-width: 100%;
+        }
+
+        svg {
+            transition: fill 0.2s linear;
+            transition: stroke 0.2s linear;
         }
 
         .header {
@@ -71,8 +80,8 @@
         .header-container-up {
             display: flex;
             align-items: center;
-            width: 100%;
             margin-bottom: 30px;
+            width: 100%;
         }
 
         .tel {
@@ -80,6 +89,16 @@
             line-height: 1;
             font-weight: 500;
             color: #666666;
+            transition: color 0.2s linear;
+        }
+
+        .tel:hover {
+            cursor: pointer;
+            color: var(--color--orange);
+        }
+
+        .tel:active {
+            color: var(--color--orange--dark);
         }
 
         .header-container-down {
@@ -90,6 +109,22 @@
 
         .logo-img {
             margin-right: 40px;
+            transition: color 0.2s linear;
+        }
+
+        .logo-img:hover {
+            cursor: pointer;
+            opacity: 70%;
+        }
+
+        .logo-img:active {
+            cursor: pointer;
+            opacity: 40%;
+        }
+
+        .arrow {
+            margin-right: 7px;
+            transition: fill 0.2s linear;
         }
 
         .personal-area {
@@ -97,28 +132,39 @@
             font-size: 16px;
             line-height: 1;
             font-weight: 400;
-            color: #CC9933;
+            color: var(--color--orange);
+            transition: color 0.2s linear;
         }
 
-        .arrow-icon {
-            display: inline-block;
-            padding-left: 28px;
-            background-image: url("../img/arrow.svg");
-            background-position: top left;
-            background-repeat: no-repeat;
+        .personal-area:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .personal-area:hover svg {
+            cursor: pointer;
+            fill: var(--color--orange-light);
+        }
+
+        .personal-area:active {
+            color: var(--color--orange--dark);
+        }
+
+        .personal-area:active svg {
+            fill: var(--color--orange--dark);
         }
 
         .header-container-down {
             max-width: 1170px;
             height: 70px;
             border-radius: 15px;
-            background-color: #FFFFFF;
+            background-color: var(--color-white);
         }
 
         .nav-list {
-            margin-left: 30px;
             display: flex;
             align-items: center;
+            margin-left: 30px;
             width: 100%;
         }
 
@@ -130,12 +176,25 @@
             color: #666666;
         }
 
+        .nav-link {
+            transition: color 0.2s linear;
+        }
+
+        .nav-link:hover {
+            cursor: pointer;
+            color: var(--color--orange);
+        }
+
+        .nav-link:active {
+            color: var(--color--orange--dark);
+        }
+
         .Rectangle {
+            background-position: top right;
             display: inline-block;
             background-image: url("../img/Rectangle.svg");
             height: 50px;
             width: 1px;
-            background-position: top right;
             background-repeat: no-repeat;
         }
 
@@ -146,15 +205,27 @@
         }
 
         .btn {
+            padding: 15px 21px;
             font-size: 16px;
             line-height: 1;
             font-weight: 400;
-            padding: 15px 21px;
             border-radius: 15px;
-            border: 1px solid #CC9933;
-            color: #CC9933;
+            border: 1px solid var(--color--orange);
+            color: var(--color--orange);
             background-color: white;
+            transition: background 0.4s linear;
+            transition: color 0.4s linear;
+        }
+
+        .btn:hover {
             cursor: pointer;
+            color: var(--color-white);
+            background-color: var(--color--orange);
+        }
+
+        .btn:active {
+            color: var(--color-white);
+            background-color: var(--color--orange--dark);
         }
 
         .header-btn {
@@ -162,22 +233,21 @@
         }
 
         .section-heading {
+            margin-left: 40px;
+            margin-top: 0;
+            margin-bottom: 0;
             font-size: 40px;
             line-height: 1;
             font-weight: 400;
             color: #333333;
-            margin-left: 40px;
-            margin-top: 0;
-            margin-bottom: 0;
         }
 
         .special-offer-list {
-            width: 1170px;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             margin-bottom: 69px;
+            width: 1170px;
         }
 
         .special-offer-left {
@@ -189,10 +259,10 @@
         }
 
         .background-1 {
+            margin-bottom: 23px;
             background-size: cover;
             background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/background-1.jpg");
             border-radius: 15px;
-            margin-bottom: 23px;
         }
 
         .background-2 {
@@ -202,102 +272,118 @@
         }
 
         .background-3 {
+            height: 100%;
             background-size: cover;
             background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/background-3.jpg");
             border-radius: 15px;
-            height: 100%;
         }
 
         .special-offer-h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-top: 40px;
+            padding-left: 40px;
             max-width: 340px;
             font-size: 40px;
             line-height: 1;
             font-weight: 700;
-            color: #FFFFFF;
-            padding-top: 40px;
-            padding-left: 40px;
-            margin-top: 0;
-            margin-bottom: 15px;
+            color: var(--color-white);
         }
 
         .special-offer-price {
+            margin-bottom: 47px;
+            padding-left: 40px;
             font-size: 20px;
             line-height: 1;
             font-weight: 400;
-            color: #FFFFFF;
-            padding-left: 40px;
-            margin-bottom: 47px;
+            color: var(--color-white);
         }
 
         .special-offer-more {
             display: inline-block;
-            font-size: 16px;
-            line-height: 1;
-            font-weight: 400;
-            color: #CC9933;
             margin-right: 2px;
             padding-left: 40px;
             padding-bottom: 40px;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 400;
+            color: var(--color--orange);
+            transition: color 0.2s linear;
+        }
+
+        .special-offer-more:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .special-offer-more:hover svg {
+            cursor: pointer;
+            stroke: var(--color--orange-light);
+        }
+
+        .special-offer-more:active {
+            color: var(--color-white);
+        }
+
+        .special-offer-more:active svg {
+            stroke: var(--color-white);
         }
 
         .Rectangle-2 {
-            background-image: url("../img/Rectangle-2.svg");
-            height: 11px;
-            width: 11px;
-            background-position: center center;
-            background-repeat: no-repeat;
-            padding-right: 22px;
+            margin-left: 6px;
+            transform: translateY(4px);
         }
 
         .h3-big {
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-top: 211px;
+            padding-left: 40px;
             max-width: 340px;
             font-size: 60px;
             line-height: 1;
             font-weight: 700;
-            color: #FFFFFF;
-            padding-top: 211px;
-            padding-left: 40px;
-            margin-top: 0;
-            margin-bottom: 15px;
+            color: var(--color-white);
         }
 
         .price-big {
+            margin-bottom: 47px;
+            padding-left: 40px;
             font-size: 30px;
             line-height: 1;
             font-weight: 400;
-            color: #FFFFFF;
-            padding-left: 40px;
-            margin-bottom: 47px;
+            color: var(--color-white);
         }
 
         .paragraph {
+            margin-top: 11px;
+            margin-bottom: 70px;
             max-width: 888px;
             font-size: 16px;
             line-height: 2;
             font-weight: 400;
-            color: #000000;
-            margin-top: 11px;
-            margin-bottom: 70px;
+            color: var(--color--black);
         }
 
         .services-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             margin-top: 20px;
             margin-bottom: 70px;
         }
 
         .services-item {
+            margin-bottom: 23px;
+            margin-right: 23px;
             width: 573px;
             border-radius: 15px;
-            background-color: #FFFFFF;
+            background-color: var(--color-white);
             background-size: contain;
             background-repeat: no-repeat;
         }
 
-        .services-item-row {
-            margin-bottom: 23px;
+        .services-item:nth-child(2n) {
+            margin-right: 0;
         }
 
         .services-item-background-1 {
@@ -318,57 +404,76 @@
 
         .services-h3 {
             display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
             padding-top: 191px;
             padding-left: 40px;
             font-size: 20px;
             line-height: 2;
             font-weight: 400;
-            color: #CC9933;
-            margin-top: 0;
-            margin-bottom: 0;
+            color: var(--color--orange);
+            transition: color 0.2s linear;
+        }
+
+        .services-h3:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .services-h3:hover svg {
+            stroke: var(--color--orange-light);
+        }
+
+        .services-h3:active {
+            color: var(--color--orange--dark);
+        }
+
+        .services-h3:active svg {
+            stroke: var(--color--orange--dark);
         }
 
         .services-paragraph {
             margin-top: 0;
             margin-bottom: 50px;
-            max-width: 440px;
             padding-left: 40px;
+            max-width: 440px;
             font-size: 16px;
             line-height: 2;
             font-weight: 400;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .advantages-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             margin-top: 30px;
             margin-bottom: 70px;
         }
 
         .advantages-item {
-            width: 275px;
-            border-radius: 15px;
-            background-color: #FFFFFF;
-            background-repeat: no-repeat;
             background-position: 43px 42px;
+            margin-right: 23px;
+            margin-bottom: 23px;
             padding-left: 43px;
             padding-top: 116px;
+            width: 275px;
+            border-radius: 15px;
+            background-color: var(--color-white);
+            background-repeat: no-repeat;
         }
 
-        .advantages-item-row {
-            margin-bottom: 23px;
+        .advantages-item:nth-child(4n) {
+            margin-right: 0;
         }
 
         .advantages-paragraph {
+            margin-top: 0;
+            margin-bottom: 41px;
             max-width: 188px;
             font-size: 16px;
             line-height: 2;
             font-weight: 400;
-            color: #000000;
-            margin-top: 0;
-            margin-bottom: 41px;
+            color: var(--color--black);
         }
 
         .hanger {
@@ -406,109 +511,125 @@
         .accommodation-list {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             margin-top: 30px;
         }
 
         .accommodation-item {
+            margin-bottom: 23px;
+            margin-right: 23px;
             width: 374px;
             min-height: 440px;
             border-radius: 15px;
-            background-color: #FFFFFF;
+            background-color: var(--color-white);
         }
 
-        .accommodation-item-row {
-            margin-bottom: 23px;
+        .accommodation-item:nth-child(3n) {
+            margin-right: 0px;
         }
 
         .price-per-night {
             display: inline-block;
+            margin-right: 44px;
+            padding-top: 20px;
+            padding-left: 45px;
             font-size: 16px;
             line-height: 1;
             font-weight: 400;
             color: #999999;
-            padding-top: 20px;
-            padding-left: 45px;
-            margin-right: 44px;
         }
 
         .bold {
             font-size: 20px;
             line-height: 1;
             font-weight: 700;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .hotel-name {
+            margin-top: 16px;
+            padding-left: 45px;
             font-size: 16px;
             line-height: 1;
             font-weight: 400;
-            color: #000000;
-            margin-top: 16px;
-            padding-left: 45px;
+            color: var(--color--black);
         }
 
         .hotel-region {
+            margin-top: 16px;
+            padding-left: 45px;
             font-size: 16px;
             line-height: 1;
             font-weight: 400;
             color: #999999;
-            margin-top: 16px;
-            padding-left: 45px;
         }
 
         .hotel-btn {
-            padding: 13px 20px;
             margin-left: 45px;
             margin-top: 20px;
             margin-bottom: 41px;
+            padding: 13px 20px;
         }
 
         .other-offers {
-            background-image: url("../img/more-hotels.png");
-            background-size: cover;
+            padding-left: 54px;
+            padding-top: 373px;
             height: 100%;
             font-size: 20px;
             line-height: 2;
             font-weight: 500;
-            color: #FFFFFF;
-            padding-left: 54px;
-            padding-top: 373px;
+            color: var(--color-white);
+            background-image: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/more-hotels.png");
+            background-size: cover;
+            border-radius: 15px;
+            transition: color 0.2s linear;
         }
 
-        .Rectangle-white {
-            display: inline-block;
-            background-image: url("../img/Rectangle-white.svg");
-            height: 11px;
-            width: 11px;
-            background-position: center center;
-            background-repeat: no-repeat;
+        .other-offers::after {
+            content: "";
+            position: absolute;
+        }
+
+        .other-offers:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .other-offers:hover svg {
+            stroke: var(--color--orange-light);
+        }
+
+        .other-offers:active {
+            color: var(--color--orange--dark);
+        }
+
+        .other-offers:active svg {
+            stroke: var(--color--orange--dark);
         }
 
         .want-tour-container {
-            border-radius: 15px;
-            background-color: #E9E9E9;
             margin-top: 70px;
             margin-bottom: 70px;
             padding-top: 38px;
             padding-left: 40px;
             padding-right: 40px;
             height: 274px;
+            border-radius: 15px;
+            background-color: #E9E9E9;
         }
 
         .want-tour-form {
-            min-height: 106px;
-            border-radius: 15px;
-            background-color: #FFFFFF;
             margin-top: 17px;
             padding-left: 28px;
             padding-right: 28px;
+            min-height: 106px;
+            border-radius: 15px;
+            background-color: var(--color-white);
         }
 
         .form-item {
-            border-right: 1px solid #E1E1E1;
             padding-left: 20px;
             padding-right: 20px;
+            border-right: 1px solid #E1E1E1;
         }
 
         .form-btn {
@@ -520,7 +641,7 @@
             font-size: 12px;
             line-height: 1;
             font-weight: 400;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .form {
@@ -544,12 +665,12 @@
         .contacts-container {
             display: flex;
             justify-content: space-between;
-            max-width: 1168px;
-            border-radius: 15px;
-            background-color: #FFFFFF;
-            padding: 45px 45px 45px 45px;
             margin-top: 26px;
             margin-bottom: 19px;
+            padding: 45px 45px 45px 45px;
+            max-width: 1168px;
+            border-radius: 15px;
+            background-color: var(--color-white);
         }
 
         .contacts-left {
@@ -557,14 +678,14 @@
         }
 
         .contacts-item {
-            width: 375px;
             display: flex;
             justify-content: space-between;
-            border-bottom: 1px solid #C4C4C4;
             margin-top: 25px;
+            width: 375px;
             font-size: 16px;
             line-height: 2;
             font-weight: 400;
+            border-bottom: 1px solid #C4C4C4;
         }
 
         h3 {
@@ -572,17 +693,17 @@
             font-size: 20px;
             line-height: 1;
             font-weight: 700;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .contacts-text {
             max-width: 235px;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .address {
             font-style: normal;
-            color: #000000;
+            color: var(--color--black);
         }
 
         .contacts-tel {
@@ -590,11 +711,20 @@
             flex-direction: column;
             align-items: flex-start;
             padding-right: 83px;
-            /*не понимаю как тут сделать по другому. Без paddinaga*/
         }
 
         .contacts-active {
-            color: #CC9933;
+            color: var(--color--orange);
+            transition: color 0.2s linear;
+        }
+
+        .contacts-active:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .contacts-active:active {
+            color: var(--color--orange--dark);
         }
 
         .mail-text {
@@ -602,32 +732,32 @@
         }
 
         .contacts-right {
-            background-image: url(/img/contacts.png);
             width: 653px;
             height: 528px;
+            background-image: url(/img/contacts.png);
         }
 
         .contacts-btn {
-            padding: 29px 27px 29px 27px;
             margin-top: 38px;
+            padding: 29px 27px 29px 27px;
         }
 
         .footer-container {
             display: flex;
+            margin-bottom: 20px;
             max-width: 1168px;
             height: 352px;
-            border-radius: 15px;
-            background-color: #333333;
             font-size: 16px;
             font-style: normal;
             line-height: 190%;
-            color: #FFFFFF;
-            margin-bottom: 20px;
+            color: var(--color-white);
+            border-radius: 15px;
+            background-color: #333333;
         }
 
         .footer-left {
-            max-width: 376px;
             padding-left: 52px;
+            max-width: 376px;
         }
 
         .footer-text {
@@ -636,17 +766,27 @@
 
         .terms-of-use {
             margin-bottom: 55px;
-            color: #CC9933;
+            color: var(--color--orange);
+            transition: color 0.2s linear;
+        }
+
+        .terms-of-use:hover {
+            cursor: pointer;
+            color: var(--color--orange-light);
+        }
+
+        .terms-of-use:active {
+            color: var(--color--orange--dark);
         }
 
         .footer-right {
-            width: 358px;
             margin-left: 102px;
             margin-top: 44px;
+            width: 358px;
         }
 
         .address-style {
-            color: #FFFFFF;
+            color: var(--color-white);
         }
 
         .footer-contacts-text {
@@ -654,9 +794,9 @@
         }
 
         .logo-black {
+            background-position: bottom right 175px;
             background-image: url(/img/logo-black.svg);
             background-repeat: no-repeat;
-            background-position: bottom right 175px;
         }
 
         .footer-social {
@@ -666,18 +806,23 @@
 
         .footer-social-icon {
             display: inline-block;
+            background-position: center;
+            margin-bottom: 10px;
+            width: 25px;
+            height: 25px;
             background-size: contain;
             background-repeat: no-repeat;
             background-color: transparent;
             opacity: 0.5;
-            width: 25px;
-            height: 25px;
-            margin-bottom: 10px;
-            background-position: center;
         }
 
         .footer-social-icon-tripadvisor {
             background-image: url(/img/tripadvisor.svg);
+        }
+
+        .footer-social-icon:hover {
+            cursor: pointer;
+            opacity: 1;
         }
 
         .footer-social-icon-twitter {
